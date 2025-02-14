@@ -3,7 +3,7 @@ pipeline {
 	stages{
 	   stage(GitCheckout){
 	       steps{
-		    git branch: 'J2EE' url: 'https://github.com/punnurubaby/onlinebookstore.git/'
+		    git branch: 'J2EE' , url: 'https://github.com/punnurubaby/onlinebookstore.git/'
 		     }
 		}
 	stage('test'){

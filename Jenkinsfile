@@ -5,6 +5,7 @@ pipeline {
 	       steps{
 		    git branch: 'J2EE' , url: 'https://github.com/punnurubaby/onlinebookstore.git/'
 		     }
+	   }
 		   stage('test'){
 	         steps{
 			sh 'mvn test'
@@ -12,7 +13,7 @@ pipeline {
 	     }
 	
 
-		}
+		
 	}
 }
 	

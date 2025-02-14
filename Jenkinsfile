@@ -6,4 +6,6 @@ pipeline {
 		    git branch: 'J2EE' , url: 'https://github.com/punnurubaby/onlinebookstore.git/'
 		     }
 		}
+	}
+}
 	

@@ -6,12 +6,7 @@ pipeline {
 		    git branch: 'J2EE' , url: 'https://github.com/punnurubaby/onlinebookstore.git/'
 		     }
 	   }
-	     stage('Build') {
-                 steps {
-                  sh 'mvn clean package'
-            }
-        }
-		   stage('test'){
+	      stage('test'){
 	         steps{
 			sh 'mvn test'
 		  }
@@ -26,6 +21,11 @@ pipeline {
 			}
 			}
 		}
+		stage('Build') {
+                 steps {
+                  sh 'mvn clean package'
+            }
+        }
 	
 
 		

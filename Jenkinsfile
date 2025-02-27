@@ -38,9 +38,7 @@ pipeline {
                     credentialsId: 'nexuscredentials',
                     artifacts: [
                         [artifactId: '01-maven-web-app',
-                         classifier: '',
-                         file: 'target/01-maven-web-app.war',
-                         type: 'war']
+                         classifier: '', type: 'war']
                     ]
                 )
             }

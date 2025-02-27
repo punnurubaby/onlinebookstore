@@ -33,7 +33,7 @@ pipeline {
                     protocol: 'http',
                     nexusUrl: '43.204.37.46:8081',
                     groupId: 'myGroupId',
-                    version: '3.0-SNAPSHOT',
+                    version: '0.0.1-SNAPSHOT',
                     repository: 'maven-snapshots',
                     credentialsId: 'nexuscredentials',
                     artifacts: [

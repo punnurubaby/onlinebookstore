@@ -26,7 +26,26 @@ pipeline {
                   sh 'mvn clean package'
             }
         }
-	
+	stage('Deploy to Nexus') {
+            steps {
+                nexusArtifactUploader(
+                    nexusVersion: 'nexus3',
+                    protocol: 'http',
+                    nexusUrl: '43.204.37.46:8081',
+                    groupId: 'myGroupId',
+                    version: '3.0-SNAPSHOT',
+                    repository: 'maven-snapshots',
+                    credentialsId: 'nexuscredentials',
+                    artifacts: [
+                        [artifactId: '01-maven-web-app',
+                         classifier: '',
+                         file: 'target/01-maven-web-app.war',
+                         type: 'war']
+                    ]
+                )
+            }
+        }
+
 
 		
 	}
